@@ -7,6 +7,8 @@ let prevBtn = document.querySelector(".nav-btn.prev");
 let nextBtn = document.querySelector(".nav-btn.next");
 let galleryImages = Array.from(myGallary.querySelectorAll("img"));
 let currentIndex = -1;
+const modeToggle = document.getElementById("mode-toggle");
+const body = document.body;
 
 myGallary.addEventListener("click", (e) => {
   if (e.target && e.target.tagName === "IMG") {
@@ -52,4 +54,17 @@ nextBtn.addEventListener("click", (e) => {
     currentIndex = 0;
   }
   img.src = galleryImages[currentIndex].src;
+});
+
+if (localStorage.getItem("mode") === "dark") {
+  body.classList.add("dark-mode");
+}
+
+modeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("mode", "dark");
+  } else {
+    localStorage.setItem("mode", "light");
+  }
 });

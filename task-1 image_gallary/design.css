@@ -7,12 +7,18 @@
   font-weight: 600;
   font-style: normal;
 }
-
-html,
 body {
   height: 100%;
   width: 100%;
   background: #cbc2c2;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode,
+body.dark-mode html {
+  background: #181818 !important;
+  color: #f1f1f1;
+  transition: background 0.3s, color 0.3s;
 }
 .app-header {
   position: sticky;
@@ -31,12 +37,78 @@ body {
 .title {
   font-size: 22px;
 }
+#mode-toggle {
+  background: var(--toggle-bg, #f0f0f0);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  margin-left: 20px;
+  position: relative;
+  transition: background 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#mode-toggle .icon-sun,
+#mode-toggle .icon-moon {
+  font-size: 1.5rem;
+  position: absolute;
+  transition: opacity 0.3s, transform 0.3s;
+}
+#mode-toggle .icon-sun {
+  color: #f9d71c;
+  opacity: 1;
+  transform: scale(1);
+}
+
+#mode-toggle .icon-moon {
+  color: #222;
+  opacity: 0;
+  transform: scale(0.7);
+}
+body.dark-mode #mode-toggle .icon-sun {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+body.dark-mode #mode-toggle .icon-moon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#mode-toggle:hover {
+  background: linear-gradient(135deg, #ffe259 0%, #ffa751 100%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.08) rotate(-8deg);
+}
+
+body.dark-mode #mode-toggle:hover {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+body.dark-mode {
+  background: #181818;
+  color: #f1f1f1;
+}
+
+body.dark-mode .app-header {
+  background: #232526;
+}
+
+body.dark-mode .gallary {
+  background: #222;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
 
 .container {
   width: 1170px;
   margin: auto;
   flex-wrap: wrap;
   display: flex;
+  background: transparent;
 }
 .gallary {
   flex-basis: 22%;
