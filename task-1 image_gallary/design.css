@@ -31,8 +31,9 @@ body.dark-mode html {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 12px 0;
+  gap: 24px;
 }
 .title {
   font-size: 22px;
@@ -96,6 +97,72 @@ body.dark-mode {
 
 body.dark-mode .app-header {
   background: #232526;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.filter-btn {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn:hover {
+  background: linear-gradient(135deg, #ffe259 0%, #ffa751 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+}
+
+body.dark-mode .filter-btn {
+  background: #333;
+  color: #f1f1f1;
+}
+
+body.dark-mode .filter-btn:hover {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #fff;
+}
+
+body.dark-mode .filter-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.gallary {
+  transition: all 0.4s ease;
+}
+
+.gallary.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.gallary.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 
 body.dark-mode .gallary {
@@ -228,6 +295,18 @@ body.dark-mode .gallary {
   .img-box {
     width: 80%;
     left: 10%;
+  }
+}
+.header-inner {
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .filter-buttons {
+    display: none !important;
+  }
+  .header-inner {
+    gap: 12px;
+    align-items: flex-start;
   }
 }
 @media (max-width: 768px) {
