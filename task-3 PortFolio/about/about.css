@@ -347,4 +347,10 @@ footer {
   .floating-img {
     max-width: 280px;
   }
+  .footer {
+    text-align: center;
+  }
+  .footer .social-icons {
+    justify-content: center;
+  }
 }

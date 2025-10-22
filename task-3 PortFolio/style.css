@@ -66,6 +66,8 @@ a {
   color: #fff;
   font-size: 1.4rem;
   cursor: pointer;
+  position: absolute;
+  right: 3%;
 }
 
 /* Layout helpers */
@@ -265,10 +267,14 @@ footer {
     position: absolute;
     top: 60px;
     right: 0;
-    width: 220px;
+    width: 150px;
     background: #1e293b;
     padding: 1rem;
     border-radius: 10px;
+    flex-direction: column;
+  }
+  .nav-right ul {
+    display: flex;
     flex-direction: column;
   }
   .nav-right.active {
@@ -284,6 +290,12 @@ footer {
   }
   #element {
     font-size: 1.05rem;
+  }
+  .footer {
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
   }
 }
 
