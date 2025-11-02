@@ -80,7 +80,7 @@ const songs = [
   },
   {
     id: 12,
-    songName: ` On may way <br>
+    songName: ` On The Way <br>
               <div class="subtitle">Alan Walker</div>
              `,
     poster: " imgs/12.jpg",
@@ -191,6 +191,107 @@ Array.from(document.getElementsByClassName("playlistPplay")).forEach((e) => {
     makeAllplay();
     el.target.classList.add("fa-circle-pause");
   });
+});
+
+let currentStart = document.getElementById("currentStart");
+let currentEnd = document.getElementById("currentEnd");
+let seek = document.getElementById("seek");
+let bar2 = document.getElementById("bar2");
+let dot = document.getElementsByClassName("dot")[0];
+
+music.addEventListener("timeupdate", () => {
+  let music_curr = music.currentTime;
+  let music_dur = music.duration;
+  let min1 = Math.floor(music_dur / 60);
+  let sec1 = Math.floor(music_dur % 60);
+  // console.log(min1, sec1);
+  if (sec1 < 10) {
+    sec1 = `0${sec1}`;
+  }
+  currentEnd.innerText = `${min1} : ${sec1}`;
+
+  let min2 = Math.floor(music_curr / 60);
+  let sec2 = Math.floor(music_curr % 60);
+
+  currentStart.innerText = `${min2} : ${sec2}`;
+
+  let progressBar = parseInt((music_curr / music_dur) * 100);
+  seek.value = progressBar;
+  // console.log(seek.value);
+  let seekBar = seek.value;
+  bar2.style.width = `${seekBar}%`;
+  dot.style.left = `${seekBar}%`;
+});
+
+seek.addEventListener("change", () => {
+  music.currentTime = (seek.value * music.duration) / 100;
+});
+
+let vol_icon = document.getElementById("vol_icon");
+let vol = document.getElementById("vol");
+let vol_bar = document.getElementsByClassName("vol_bar")[0];
+let vol_dot = document.getElementById("vol_dot");
+
+vol.addEventListener("change", () => {
+  if (vol.value == 0) {
+    vol_icon.classList.remove("fa-volume-high");
+    vol_icon.classList.remove("fa-volume-low");
+    vol_icon.classList.add("fa-volume-xmark");
+  } else if (vol.value > 50) {
+    vol_icon.classList.remove("fa-volume-xmark");
+    vol_icon.classList.remove("fa-volume-low");
+    vol_icon.classList.add("fa-volume-high");
+  } else {
+    vol_icon.classList.remove("fa-volume-high");
+    vol_icon.classList.remove("fa-volume-xmark");
+    vol_icon.classList.add("fa-volume-low");
+  }
+
+  let vol_a = vol.value;
+  vol_bar.style.width = `${vol_a}%`;
+  vol_dot.style.left = `${vol_a}%`;
+  music.volume = vol_a / 100;
+});
+
+let back = document.getElementById("back");
+let next = document.getElementById("next");
+
+back.addEventListener("click", () => {
+  index -= 1;
+  if (index < 1) {
+    index = songs.length;
+  }
+  music.src = `audio/song${index}.mp3`;
+  music.play();
+  wave.classList.add("active1");
+  masterPlay.classList.add("fa-pause");
+  masterPoster.src = songs[index - 1].poster;
+  title.innerHTML = songs[index - 1].songName;
+  makeAllBackground();
+  Array.from(document.getElementsByClassName("songItem"))[
+    index - 1
+  ].style.background = "rgb(105,105,105,.1)";
+  makeAllplay();
+  el.target.classList.add("fa-circle-pause");
+});
+
+next.addEventListener("click", () => {
+  index += 1;
+  if (index >= songs.length) {
+    index = 1;
+  }
+  music.src = `audio/song${index}.mp3`;
+  music.play();
+  wave.classList.add("active1");
+  masterPlay.classList.add("fa-pause");
+  masterPoster.src = songs[index - 1].poster;
+  title.innerHTML = songs[index - 1].songName;
+  makeAllBackground();
+  Array.from(document.getElementsByClassName("songItem"))[
+    index - 1
+  ].style.background = "rgb(105,105,105,.1)";
+  makeAllplay();
+  el.target.classList.add("fa-circle-pause");
 });
 
 Array.from(document.getElementsByClassName("songItem")).forEach((e, i) => {
