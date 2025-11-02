@@ -104,42 +104,42 @@ const songs = [
     songName: `Shaky <br>
               <div class="subtitle">Sanju Rathod</div>
              `,
-    poster: " imgs/shaky.jpeg",
+    poster: " imgs/5.jpeg",
   },
   {
     id: 16,
     songName: `Azul <br>
               <div class="subtitle">Guru Randhava</div>
              `,
-    poster: " imgs/azul.jpg",
+    poster: " imgs/4.jpg",
   },
   {
     id: 17,
     songName: ` Naina <br>
               <div class="subtitle">Diljit Dosanjh</div>
              `,
-    poster: " imgs/naina.jpeg",
+    poster: " imgs/11.jpeg",
   },
   {
     id: 18,
     songName: `Kesariya <br>
               <div class="subtitle">Arjit singh</div>
              `,
-    poster: " imgs/kesariya.jpg",
+    poster: " imgs/3.jpg",
   },
   {
     id: 19,
     songName: `Vaaste <br>
               <div class="subtitle">Dhavani</div>
              `,
-    poster: " imgs/vaaste.jpeg",
+    poster: " imgs/8.jpeg",
   },
   {
     id: 20,
     songName: `Coca Cola <br>
               <div class="subtitle">Neha Kakkar</div>
              `,
-    poster: "  imgs/cocacola.jpg",
+    poster: "  imgs/9.jpg",
   },
 ];
 
@@ -158,10 +158,21 @@ masterPlay.addEventListener("click", () => {
   }
 });
 
+const makeAllplay = () => {
+  Array.from(document.getElementsByClassName("playlistPplay")).forEach((el) => {
+    el.classList.remove("fa-circle-pause");
+  });
+};
+const makeAllBackground = () => {
+  Array.from(document.getElementsByClassName("songItem")).forEach((el) => {
+    el.style.background = "rgb(105,105,105,.0)";
+  });
+};
+
 let masterPoster = document.getElementById("poster_master_play");
 let title = document.getElementById("title");
 let index = 0;
-console.log(index);
+// console.log(index);
 
 Array.from(document.getElementsByClassName("playlistPplay")).forEach((e) => {
   e.addEventListener("click", (el) => {
@@ -173,6 +184,12 @@ Array.from(document.getElementsByClassName("playlistPplay")).forEach((e) => {
     masterPlay.classList.add("fa-pause");
     masterPoster.src = songs[index - 1].poster;
     title.innerHTML = songs[index - 1].songName;
+    makeAllBackground();
+    Array.from(document.getElementsByClassName("songItem"))[
+      index - 1
+    ].style.background = "rgb(105,105,105,.1)";
+    makeAllplay();
+    el.target.classList.add("fa-circle-pause");
   });
 });
 
