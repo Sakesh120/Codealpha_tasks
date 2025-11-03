@@ -7,6 +7,8 @@ const songs = [
               <div class="subtitle">Alan Walker</div>
              `,
     poster: "  imgs/1.jpg",
+    singer: "Alen Walker-Fade",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 2,
@@ -14,6 +16,8 @@ const songs = [
               <div class="subtitle">Jubin</div>
              `,
     poster: " imgs/2.jpg",
+    singer: "Jubin Nautiyal",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 3,
@@ -21,6 +25,8 @@ const songs = [
               <div class="subtitle">Arjit singh</div>
              `,
     poster: " imgs/3.jpg",
+    singer: "Arjit Singh",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 4,
@@ -28,6 +34,8 @@ const songs = [
               <div class="subtitle">Guru Randhava</div>
              `,
     poster: " imgs/4.jpg",
+    singer: "Guru Randhava",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 5,
@@ -35,6 +43,8 @@ const songs = [
               <div class="subtitle">Sanju Rathod</div>
              `,
     poster: " imgs/5.jpeg",
+    singer: "Sanju Rathod",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 6,
@@ -42,6 +52,8 @@ const songs = [
               <div class="subtitle">A R Ranman</div>
              `,
     poster: " imgs/6.jpeg",
+    singer: "A R Rahman",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 7,
@@ -49,6 +61,8 @@ const songs = [
               <div class="subtitle">Honer Singh</div>
              `,
     poster: " imgs/7.webp",
+    singer: "Honey Singh",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 8,
@@ -56,6 +70,8 @@ const songs = [
               <div class="subtitle">Dhavani</div>
              `,
     poster: " imgs/8.jpeg",
+    singer: "Dhavani Bhanushali",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 9,
@@ -63,6 +79,8 @@ const songs = [
               <div class="subtitle">Neha Kakkar</div>
              `,
     poster: " imgs/9.jpg",
+    singer: "Neha Kakkar",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 10,
@@ -70,6 +88,8 @@ const songs = [
               <div class="subtitle">Udit Narayan</div>
              `,
     poster: " imgs/10.jpeg",
+    singer: "Udit Narayan",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 11,
@@ -77,6 +97,8 @@ const songs = [
               <div class="subtitle">Diljit Dosanjh</div>
              `,
     poster: " imgs/11.jpeg",
+    singer: "Diljit Dosajhn",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 12,
@@ -84,6 +106,8 @@ const songs = [
               <div class="subtitle">Alan Walker</div>
              `,
     poster: " imgs/12.jpg",
+    singer: "Alen Walker-Fade",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 13,
@@ -91,6 +115,8 @@ const songs = [
               <div class="subtitle">jubin</div>
              `,
     poster: " imgs/13.webp",
+    singer: "Jubin Nautiyal",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 14,
@@ -98,6 +124,8 @@ const songs = [
               <div class="subtitle">Guru Randhava</div>
              `,
     poster: " imgs/14.jpg",
+    singer: "Guru Randhava",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 15,
@@ -105,6 +133,8 @@ const songs = [
               <div class="subtitle">Sanju Rathod</div>
              `,
     poster: " imgs/5.jpeg",
+    singer: "Sanju Rathod",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 16,
@@ -112,6 +142,8 @@ const songs = [
               <div class="subtitle">Guru Randhava</div>
              `,
     poster: " imgs/4.jpg",
+    singer: "Guru Randhava",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 17,
@@ -119,6 +151,8 @@ const songs = [
               <div class="subtitle">Diljit Dosanjh</div>
              `,
     poster: " imgs/11.jpeg",
+    singer: "Diljit Dosanjh",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 18,
@@ -126,6 +160,8 @@ const songs = [
               <div class="subtitle">Arjit singh</div>
              `,
     poster: " imgs/3.jpg",
+    singer: "Arjit Singh",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 19,
@@ -133,6 +169,8 @@ const songs = [
               <div class="subtitle">Dhavani</div>
              `,
     poster: " imgs/8.jpeg",
+    singer: "Dhavani Bhanushali",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
   {
     id: 20,
@@ -140,6 +178,8 @@ const songs = [
               <div class="subtitle">Neha Kakkar</div>
              `,
     poster: "  imgs/9.jpg",
+    singer: "Neha Kakkar",
+    discription: `You were the shadow to my light did you feel us Another start you fade <br> Away afraid our aim is out ofsight Wanna see us Alive`,
   },
 ];
 
@@ -171,6 +211,9 @@ const makeAllBackground = () => {
 
 let masterPoster = document.getElementById("poster_master_play");
 let title = document.getElementById("title");
+let singer = document.getElementById("singer");
+let discription = document.getElementById("discription");
+
 let index = 0;
 // console.log(index);
 
@@ -184,6 +227,8 @@ Array.from(document.getElementsByClassName("playlistPplay")).forEach((e) => {
     masterPlay.classList.add("fa-pause");
     masterPoster.src = songs[index - 1].poster;
     title.innerHTML = songs[index - 1].songName;
+    singer.innerText = songs[index - 1].singer;
+    discription.innerHTML = songs[index - 1].discription;
     makeAllBackground();
     Array.from(document.getElementsByClassName("songItem"))[
       index - 1
@@ -267,6 +312,8 @@ back.addEventListener("click", () => {
   masterPlay.classList.add("fa-pause");
   masterPoster.src = songs[index - 1].poster;
   title.innerHTML = songs[index - 1].songName;
+  singer.innerText = songs[index - 1].singer;
+  discription.innerHTML = songs[index - 1].discription;
   makeAllBackground();
   Array.from(document.getElementsByClassName("songItem"))[
     index - 1
@@ -286,6 +333,8 @@ next.addEventListener("click", () => {
   masterPlay.classList.add("fa-pause");
   masterPoster.src = songs[index - 1].poster;
   title.innerHTML = songs[index - 1].songName;
+  singer.innerText = songs[index - 1].singer;
+  discription.innerHTML = songs[index - 1].discription;
   makeAllBackground();
   Array.from(document.getElementsByClassName("songItem"))[
     index - 1
